@@ -1,0 +1,374 @@
+HTML
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>20/11 — Tri ân cô Đoàn Thị Thanh Phương</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #faf7f2;
+      --surface: #ffffff;
+      --ink: #2c2520;
+      --muted: #6e6259;
+      --accent: #b84a39;
+      --accent-soft: #f5e6e3;
+      --gold: #c59b27;
+      --line: #e8dfd5;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Be Vietnam Pro', sans-serif;
+      background-color: var(--bg);
+      background-image: radial-gradient(#e5dacb 0.8px, transparent 0.8px);
+      background-size: 20px 20px;
+      color: var(--ink);
+      line-height: 1.7;
+      padding: 24px 16px 64px;
+    }
+
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 40px 24px;
+      margin-bottom: 22px;
+      box-shadow: 0 10px 30px rgba(44, 37, 32, 0.04);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, var(--accent), var(--gold), var(--accent));
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 6px 16px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 5vw, 39px);
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .lead {
+      font-size: 17px;
+      color: var(--muted);
+    }
+
+    .lead strong {
+      color: var(--accent);
+    }
+
+    main {
+      display: grid;
+      gap: 20px;
+    }
+
+    section {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 26px 28px;
+      box-shadow: 0 6px 20px rgba(44, 37, 32, 0.03);
+    }
+
+    .part-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 10px;
+    }
+
+    .part-tag b {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 12px;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+
+    figure {
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: #f5efe7;
+      text-align: center;
+    }
+
+    figure img {
+      max-width: 310px;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 22px auto 10px;
+      display: block;
+      box-shadow: 0 8px 22px rgba(44, 37, 32, 0.09);
+    }
+
+    figcaption {
+      padding: 8px 16px 20px;
+      font-size: 14px;
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    dl {
+      display: grid;
+      gap: 12px;
+    }
+
+    dl div {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed var(--line);
+    }
+
+    dl div:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    dt {
+      font-size: 14px;
+      color: var(--muted);
+      flex-shrink: 0;
+    }
+
+    dd {
+      font-weight: 600;
+      text-align: right;
+    }
+
+    .wish-card {
+      background: #fcfaf7;
+      border-left: 3px solid var(--accent);
+      padding: 18px 20px;
+      border-radius: 0 12px 12px 0;
+      font-size: 15.5px;
+    }
+
+    .wish-card p + p {
+      margin-top: 12px;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pill {
+      background: var(--accent-soft);
+      color: var(--accent);
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 20px;
+      border-radius: 10px;
+      font-size: 14.5px;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .btn-send {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-send:hover {
+      background: #9b3a2b;
+    }
+
+    .btn-link {
+      background: transparent;
+      color: var(--ink);
+      border: 1px solid var(--line);
+    }
+
+    .btn-link:hover {
+      background: #f5efe8;
+    }
+
+    #gift-note {
+      margin-top: 14px;
+      padding: 12px 16px;
+      border-radius: 10px;
+      background: #eef7f0;
+      color: #256036;
+      font-size: 14.5px;
+      font-weight: 500;
+      display: none;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 32px;
+      font-size: 13.5px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 520px) {
+      section { padding: 20px 18px; }
+      dl div { flex-direction: column; gap: 2px; }
+      dd { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="badge">
+        <span>Tri ân</span>
+        <span aria-hidden="true">✦ ✦ ✦</span>
+        <span>20 / 11</span>
+      </div>
+      <h1>Chúc Mừng Ngày Nhà Giáo Việt Nam</h1>
+      <p class="lead">Kính gửi cô <strong>Đoàn Thị Thanh Phương</strong></p>
+    </header>
+
+    <main>
+      <section>
+        <p class="part-tag"><b>I</b> Ảnh đại diện</p>
+        <figure>
+          <img src="cham.png" alt="Chạm - Bắt sóng cảm xúc" onerror="this.style.display='none'">
+          <figcaption>Chạm — Bắt sóng cảm xúc gửi cô Đoàn Thị Thanh Phương</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <p class="part-tag"><b>II</b> Thông tin lời chúc</p>
+        <h2>Thông tin tri ân</h2>
+        <dl>
+          <div>
+            <dt>Người nhận</dt>
+            <dd>Cô Đoàn Thị Thanh Phương</dd>
+          </div>
+          <div>
+            <dt>Dịp đặc biệt</dt>
+            <dd>Ngày Nhà giáo Việt Nam 20/11</dd>
+          </div>
+          <div>
+            <dt>Người gửi</dt>
+            <dd>Học trò của cô</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section>
+        <p class="part-tag"><b>III</b> Lời chúc 20/11</p>
+        <h2>Gửi cô lời cảm ơn chân thành</h2>
+        <div class="wish-card">
+          <p>Nhân ngày Nhà giáo Việt Nam 20/11, chúc cô <strong>Đoàn Thị Thanh Phương</strong> luôn dồi dào sức khỏe, nhiều niềm vui và bình an.</p>
+          <p>Cảm ơn cô vì những giờ dạy tận tâm và sự đồng hành đầy yêu thương dành cho chúng em.</p>
+        </div>
+      </section>
+
+      <section>
+        <p class="part-tag"><b>IV</b> Dấu ấn của cô</p>
+        <h2>Những điều đáng quý</h2>
+        <div class="pill-list">
+          <span class="pill">✦ Tận tâm</span>
+          <span class="pill">✦ Nhiệt huyết</span>
+          <span class="pill">✦ Gần gũi</span>
+          <span class="pill">✦ Truyền cảm hứng</span>
+        </div>
+      </section>
+
+      <section>
+        <p class="part-tag"><b>V</b> Gửi hoa &amp; âm nhạc</p>
+        <h2>Món quà nhỏ ngày 20/11</h2>
+        <p style="color: var(--muted); font-size: 15px;">Bấm nút bên dưới để gửi thêm một bó hoa chúc mừng tới cô nhé.</p>
+        <div class="btn-row">
+          <button class="btn btn-send" onclick="addBouquet()">💐 Tặng hoa cô Phương</button>
+          <a class="btn btn-link" href="https://www.youtube.com/results?search_query=nhac+20+11+hay+nhat" target="_blank" rel="noopener">Mở nhạc 20/11 ↗</a>
+        </div>
+        <div id="gift-note"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Chúc mừng 20/11 — Cô Đoàn Thị Thanh Phương</p>
+    </footer>
+  </div>
+
+  <script>
+    let bouquets = 0;
+    function addBouquet() {
+      bouquets += 1;
+      const box = document.getElementById('gift-note');
+      box.style.display = 'block';
+      box.textContent = `💐 Đã gửi tặng cô Đoàn Thị Thanh Phương ${bouquets} bó hoa chúc mừng 20/11!`;
+    }
+  </script>
+</body>
+</html>
