@@ -1,10 +1,9 @@
-HTML
 <!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>20/11 — Tri ân cô Đoàn Thị Thanh Phương</title>
+  <title>20/11 — Chị Đoàn Thị Thanh Phương</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
@@ -157,7 +156,7 @@ HTML
     }
 
     figcaption {
-      padding: 8px 16px 20px;
+      padding: 14px 16px;
       font-size: 14px;
       font-style: italic;
       color: var(--muted);
@@ -198,10 +197,6 @@ HTML
       padding: 18px 20px;
       border-radius: 0 12px 12px 0;
       font-size: 15.5px;
-    }
-
-    .wish-card p + p {
-      margin-top: 12px;
     }
 
     .pill-list {
@@ -288,53 +283,57 @@ HTML
   <div class="wrap">
     <header>
       <div class="badge">
-        <span>Tri ân</span>
-        <span aria-hidden="true">✦ ✦ ✦</span>
         <span>20 / 11</span>
+        <span aria-hidden="true">✦ ✦ ✦</span>
+        <span>Chúc mừng</span>
       </div>
       <h1>Chúc Mừng Ngày Nhà Giáo Việt Nam</h1>
-      <p class="lead">Kính gửi cô <strong>Đoàn Thị Thanh Phương</strong></p>
+      <p class="lead">Gửi chị <strong>Đoàn Thị Thanh Phương</strong></p>
     </header>
 
     <main>
       <section>
         <p class="part-tag"><b>I</b> Ảnh đại diện</p>
         <figure>
-          <img src="cham.png" alt="Chạm - Bắt sóng cảm xúc" onerror="this.style.display='none'">
-          <figcaption>Chạm — Bắt sóng cảm xúc gửi cô Đoàn Thị Thanh Phương</figcaption>
+          <img
+            id="avatar-img"
+            src="cham.png"
+            alt="Chạm - Bắt sóng cảm xúc"
+            onerror="if (!this.dataset.retried) { this.dataset.retried = '1'; this.src = 'cham.png.png'; } else { this.style.display = 'none'; }"
+          >
+          <figcaption>Chạm — Bắt sóng cảm xúc gửi chị Đoàn Thị Thanh Phương</figcaption>
         </figure>
       </section>
 
       <section>
         <p class="part-tag"><b>II</b> Thông tin lời chúc</p>
-        <h2>Thông tin tri ân</h2>
+        <h2>Thông tin</h2>
         <dl>
           <div>
             <dt>Người nhận</dt>
-            <dd>Cô Đoàn Thị Thanh Phương</dd>
+            <dd>Chị Đoàn Thị Thanh Phương</dd>
           </div>
           <div>
-            <dt>Dịp đặc biệt</dt>
-            <dd>Ngày Nhà giáo Việt Nam 20/11</dd>
+            <dt>Dịp</dt>
+            <dd>20/11</dd>
           </div>
           <div>
             <dt>Người gửi</dt>
-            <dd>Học trò của cô</dd>
+            <dd>Em Thành Pisa</dd>
           </div>
         </dl>
       </section>
 
       <section>
         <p class="part-tag"><b>III</b> Lời chúc 20/11</p>
-        <h2>Gửi cô lời cảm ơn chân thành</h2>
+        <h2>Lời chúc gửi chị</h2>
         <div class="wish-card">
-          <p>Nhân ngày Nhà giáo Việt Nam 20/11, chúc cô <strong>Đoàn Thị Thanh Phương</strong> luôn dồi dào sức khỏe, nhiều niềm vui và bình an.</p>
-          <p>Cảm ơn cô vì những giờ dạy tận tâm và sự đồng hành đầy yêu thương dành cho chúng em.</p>
+          <p>Nhân ngày 20/11, chúc chị <strong>Đoàn Thị Thanh Phương</strong> luôn dồi dào sức khỏe, nhiều niềm vui và bình an.</p>
         </div>
       </section>
 
       <section>
-        <p class="part-tag"><b>IV</b> Dấu ấn của cô</p>
+        <p class="part-tag"><b>IV</b> Vài nét về chị</p>
         <h2>Những điều đáng quý</h2>
         <div class="pill-list">
           <span class="pill">✦ Tận tâm</span>
@@ -345,11 +344,11 @@ HTML
       </section>
 
       <section>
-        <p class="part-tag"><b>V</b> Gửi hoa &amp; âm nhạc</p>
-        <h2>Món quà nhỏ ngày 20/11</h2>
-        <p style="color: var(--muted); font-size: 15px;">Bấm nút bên dưới để gửi thêm một bó hoa chúc mừng tới cô nhé.</p>
+        <p class="part-tag"><b>V</b> Hoa &amp; âm nhạc</p>
+        <h2>Quà nhỏ 20/11 cho chị</h2>
+        <p style="color: var(--muted); font-size: 15px;">Bấm nút bên dưới để tặng hoa cho chị nhé.</p>
         <div class="btn-row">
-          <button class="btn btn-send" onclick="addBouquet()">💐 Tặng hoa cô Phương</button>
+          <button class="btn btn-send" onclick="addBouquet()">💐 Tặng hoa chị Phương</button>
           <a class="btn btn-link" href="https://www.youtube.com/results?search_query=nhac+20+11+hay+nhat" target="_blank" rel="noopener">Mở nhạc 20/11 ↗</a>
         </div>
         <div id="gift-note"></div>
@@ -357,7 +356,7 @@ HTML
     </main>
 
     <footer>
-      <p>Chúc mừng 20/11 — Cô Đoàn Thị Thanh Phương</p>
+      <p>20/11 — Chị Đoàn Thị Thanh Phương · Em Thành Pisa</p>
     </footer>
   </div>
 
@@ -367,7 +366,7 @@ HTML
       bouquets += 1;
       const box = document.getElementById('gift-note');
       box.style.display = 'block';
-      box.textContent = `💐 Đã gửi tặng cô Đoàn Thị Thanh Phương ${bouquets} bó hoa chúc mừng 20/11!`;
+      box.textContent = `💐 Đã tặng chị Đoàn Thị Thanh Phương ${bouquets} bó hoa chúc mừng 20/11!`;
     }
   </script>
 </body>
